@@ -48,9 +48,9 @@ try {
         $event = mktime(0,0,0,5,24,2016);
         $secondsLeft = $event - time();
         
-        $days = floor($secondsLeft / (60*60*24));
-        $hours = floor(($secondsLeft - $days * (60*60*24)) / (60*60))
-        //$minutes = floor(($secondsLeft - $days*60*60*24 - $hours*60*60) / 60)
+        $days = floor($secondsLeft / 86400));
+        $hours = floor(($secondsLeft - $days * 86400) / 3600);
+        $minutes = floor(($secondsLeft - $days*60*60*24 - $hours*60*60) / 60);
         
     	$response = $client->sendMessage([
          	'chat_id' => $update->message->chat->id,
