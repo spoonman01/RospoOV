@@ -48,7 +48,10 @@ try {
         $event = mktime(0,0,0,5,24,2016);
         $secondsLeft = $event - time();
         
-        $days = floor($secondsLeft / 86400));
+        $days = 6;
+        $hours = 7;
+        $minutes = 8;
+        //$days = floor($secondsLeft / 86400));
         //$hours = floor(($secondsLeft - $days * 86400) / 3600);
         //$minutes = floor(($secondsLeft - $days*60*60*24 - $hours*60*60) / 60);
         
