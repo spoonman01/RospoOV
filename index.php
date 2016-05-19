@@ -54,7 +54,7 @@ try {
         
     	$response = $client->sendMessage([
          	'chat_id' => $update->message->chat->id,
-         	'text' => "Overwatch Countdown: ".$days."giorni, ".$hours." ore e ".$minutes." minuti"
+         	'text' => "Overwatch Countdown: ".$days."giorni, ".$secondsLeft." ore e ".$minutes." minuti"
          	//'text' => "Overwatch Countdown"
      	]);
 
