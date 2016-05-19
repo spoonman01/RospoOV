@@ -46,15 +46,16 @@ try {
     }
     else if($update->message->text == '/countdown')
     {
-        $event = mktime(0,0,0,5,24,2016);
+        /*$event = mktime(0,0,0,5,24,2016);
         $secondsLeft = $event - time();
         $days = floor($secondsLeft / 60*60*24);
         $hours = floor(($secondsLeft - $days*60*60*24) / 60*60)
         $minutes = floor(($secondsLeft - $days*60*60*24 - $hours*60*60) / 60)
-        
+        */
     	$response = $client->sendMessage([
          	'chat_id' => $update->message->chat->id,
-         	'text' => "Overwatch Countdown: ".$days."giorni, ".$hours." ore e ".$minutes." minuti"
+         	//'text' => "Overwatch Countdown: ".$days."giorni, ".$hours." ore e ".$minutes." minuti"
+         	'text' => "Overwatch Countdown"
      	]);
 
     }
