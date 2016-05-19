@@ -39,26 +39,17 @@ try {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "List of commands :\n /email -> Get email address of the owner \n /latest -> Get latest posts of the blog 
+    		'text' => "List of commands :\n /email -> Get email address of the owner \n /countdown -> Show the countdown to the Overwatch release 
     		/help -> Shows list of available commands"
     		]);
 
     }
-    else if($update->message->text == '/latest')
+    else if($update->message->text == '/countdown')
     {
-    		Feed::$cacheDir 	= __DIR__ . '/cache';
-			Feed::$cacheExpire 	= '5 hours';
-			$rss 		= Feed::loadRss($url);
-			$items 		= $rss->item;
-			$lastitem 	= $items[0];
-			$lastlink 	= $lastitem->link;
-			$lasttitle 	= $lastitem->title;
-			$message = $lasttitle . " \n ". $lastlink;
-			$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
-			$response = $client->sendMessage([
-					'chat_id' => $update->message->chat->id,
-					'text' => $message
-				]);
+    	 $response = $client->sendMessage([
+         	'chat_id' => $update->message->chat->id,
+         	'text' => "Countdown: 3 giorni"
+     	]);
 
     }
     else
