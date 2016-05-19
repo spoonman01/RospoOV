@@ -49,7 +49,7 @@ try {
         $secondsLeft = $event - time();
         
         $days = floor($secondsLeft / (60*60*24));
-        $hours = floor(($secondsLeft - $days*60*60*24) / (60*60))
+        $hours = floor(($secondsLeft - $days * (60*60*24)) / (60*60))
         //$minutes = floor(($secondsLeft - $days*60*60*24 - $hours*60*60) / 60)
         
     	$response = $client->sendMessage([
