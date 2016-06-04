@@ -26,7 +26,7 @@ $update = json_decode(file_get_contents('php://input'));
 //your app
 try {
 
-    if($update->message->text == '/email' || $update->message->text == '/email@RospoLFC_Bot')
+    if($update->message->text == '/email' || $update->message->text == '/email@RospoOV_Bot')
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -34,7 +34,7 @@ try {
         	'text' => "You can send email to : lucarospocher@gmail.com"
      	]);
     }
-    else if($update->message->text == '/help' || $update->message->text == '/help@RospoLFC_Bot')
+    else if($update->message->text == '/help' || $update->message->text == '/help@RospoOV_Bot')
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -43,7 +43,7 @@ try {
     		]);
 
     }
-    else if($update->message->text == '/countdown'  || $update->message->text == '/countdown@RospoLFC_Bot')
+    else if($update->message->text == '/countdown'  || $update->message->text == '/countdown@RospoOV_Bot')
     {
         $event = mktime(0,30,8,6,22,2016);
         $secondsLeft = $event - time();
