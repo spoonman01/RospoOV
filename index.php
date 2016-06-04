@@ -26,7 +26,7 @@ $update = json_decode(file_get_contents('php://input'));
 //your app
 try {
 
-    if($update->message->text == '/email' || $update->message->text == '/email@RospoOV_Bot')
+    if($update->message->text == '/email' || $update->message->text == '/email@RospoLFC_Bot')
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
@@ -34,18 +34,18 @@ try {
         	'text' => "You can send email to : lucarospocher@gmail.com"
      	]);
     }
-    else if($update->message->text == '/help' || $update->message->text == '/help@RospoOV_Bot')
+    else if($update->message->text == '/help' || $update->message->text == '/help@RospoLFC_Bot')
     {
     	$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
     	$response = $client->sendMessage([
     		'chat_id' => $update->message->chat->id,
-    		'text' => "List of commands :\n /email -> Rospo's secret email \n /countdown -> Mostra il countdown di Overwatch \n /help -> Lista Comandi"
+    		'text' => "List of commands :\n /email -> Rospo's secret email \n /countdown -> Mostra il countdown di LFC \n /help -> Lista Comandi"
     		]);
 
     }
-    else if($update->message->text == '/countdown'  || $update->message->text == '/countdown@RospoOV_Bot')
+    else if($update->message->text == '/countdown'  || $update->message->text == '/countdown@RospoLFC_Bot')
     {
-        $event = mktime(0,0,0,5,24,2016);
+        $event = mktime(0,30,8,6,22,2016);
         $secondsLeft = $event - time();
         
         //$days = 6;
@@ -57,7 +57,7 @@ try {
         
     	$response = $client->sendMessage([
          	'chat_id' => $update->message->chat->id,
-         	'text' => "Overwatch Countdown: ".$days." giorni, ".$hours." ore e ".$minutes." minuti"
+         	'text' => "LFC Countdown: ".$days." giorni, ".$hours." ore e ".$minutes." minuti"
      	]);
 
     }
