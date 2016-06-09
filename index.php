@@ -45,7 +45,7 @@ try {
     }
     else if($update->message->text == '/countdown'  || $update->message->text == '/countdown@RospoOV_Bot')
     {
-        $event = mktime(0,30,8,6,22,2016);
+        $event = mktime(8,30,0,6,22,2016);
         $secondsLeft = $event - time();
         
         //$days = 6;
