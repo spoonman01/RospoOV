@@ -52,8 +52,8 @@ try {
         //$hours = 7;
         //$minutes = 8;
         $days = floor($secondsLeft / 86400);
-        $hours = floor(($secondsLeft - ($days * 86400)) / 3600) - 1;
-        $minutes = floor(($secondsLeft - ($days * 86400) - (($hours + 1) * 3600)) / 60) + 1;
+        $hours = floor(($secondsLeft - ($days * 86400)) / 3600) - 2;
+        $minutes = floor(($secondsLeft - ($days * 86400) - (($hours + 2) * 3600)) / 60) + 1;
         
     	$response = $client->sendMessage([
          	'chat_id' => $update->message->chat->id,
