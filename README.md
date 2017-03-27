@@ -1,4 +1,4 @@
-# geekswebbot
+# RospoOV
 Bot di Telegram in PHP, hostato su Heroku per la creazione di timer impostati da utenti della chat di Telegram.
 
 Credits to:
